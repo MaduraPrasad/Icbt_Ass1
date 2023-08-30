@@ -1,0 +1,74 @@
+/* ConsultantCard.css */
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #00587c;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 30px;
+    font-size: 25px;
+
+}
+
+.card-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.card-body p {
+    margin: 5px 0;
+}
+
+.card-body b {
+    font-weight: bold;
+}
+
+.card-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.info-item {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically align content */
+    margin: 5px 0;
+}
+
+.info-item b {
+    margin-right: 10px;
+    /* Add spacing between the label and content */
+}
+
+.info-item .inside {
+    padding-left: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}

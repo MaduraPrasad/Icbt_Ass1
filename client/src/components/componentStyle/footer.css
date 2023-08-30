@@ -1,0 +1,132 @@
+/* Footer.css */
+
+/* Overall Footer */
+.footer {
+    background-color: #00587c;
+    color: #fff;
+    padding: 0px 0;
+  }
+  
+  /* Footer Section */
+  .footer-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Column Styles */
+  .column {
+    flex: 1;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+
+  
+  /* Nav Links Styles */
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    padding-left: 50px;
+  }
+  
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #fff;
+  }
+  
+  /* Search Bar Styles */
+  .search-bar {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  /* Contact Details Styles */
+  .column p {
+    margin: 0;
+  }
+  
+  /* Admin Section Styles */
+  .admin-login {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .App {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+#left{
+    padding-left: 150px;
+}
+
+.search-input{
+    height: 40px;;
+    margin-right: 10px;
+}
+
+.footer-btn{
+    height: 40px;
+    color: #ccc;
+    background-color: #222;
+    text-align: center;
+}
+
+.footer-btn:hover{
+    height: 40px;
+    background-color: #ccc;
+    color: #222;
+    text-align: center;
+}
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .footer-section {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+    }
+  }
+  
