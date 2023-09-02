@@ -1,16 +1,17 @@
 const express = require("express");
 const {
+
   loginController,
   registerController,
   authController,
-  applyDoctorController,
+  applyConsultantController,
   getAllNotificationController,
   deleteAllNotificationController,
-  getAllDocotrsController,
+  getAllConsultantController,
   bookeAppointmnetController,
   bookingAvailabilityController,
   userAppointmentsController,
-} = require("../controllers/userCtrl");
+} = require("../controllers/userController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
 //router onject
@@ -20,6 +21,12 @@ const router = express.Router();
 //LOGIN || POST
 router.post("/login", loginController);
 
+
+// ------------------------------------------
+//LOGIN || POST 
+// router.post("/jbs-login", loginController);
+//-------------------------------------------
+
 //REGISTER || POST
 router.post("/register", registerController);
 
@@ -27,7 +34,7 @@ router.post("/register", registerController);
 router.post("/getUserData", authMiddleware, authController);
 
 //APply Doctor || POST
-router.post("/apply-doctor", authMiddleware, applyDoctorController);
+router.post("/apply-consultant", authMiddleware, applyConsultantController);
 
 //Notifiaction  Doctor || POST
 router.post(
@@ -43,7 +50,10 @@ router.post(
 );
 
 //GET ALL DOC
-router.get("/getAllDoctors", authMiddleware, getAllDocotrsController);
+router.get("/getAllconsultants", authMiddleware, getAllConsultantController);
+
+//GET ALL consultant without authorization
+router.get("/getAllconsultantsForUsers", getAllConsultantController);
 
 //BOOK APPOINTMENT
 router.post("/book-appointment", authMiddleware, bookeAppointmnetController);
