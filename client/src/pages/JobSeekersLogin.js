@@ -20,7 +20,7 @@ const JobSeekerLogin = () => {
       window.location.reload();
       dispatch(hideLoading());
       if (res.data.success) {
-        localStorage.setItem("token_JobSeeker", res.data.token_JobSeeker);
+        localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
         navigate("/jbs-dashboard");
       } else {

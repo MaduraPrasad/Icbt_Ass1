@@ -1,10 +1,13 @@
 import React from "react";
 import "../styles/LayoutStyles.css";
 import { adminMenu, userMenu } from "./../Data/data";
+import logo from '../assets/logo2.jpg';
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
+
+
 const Layout = ({ children }) => {
   const { user } = useSelector((state) => state.user);
   const location = useLocation();
@@ -49,8 +52,7 @@ const Layout = ({ children }) => {
         <div className="layout">
           <div className="sidebar">
             <div className="logo">
-              <h3 className="text-light">The Job</h3>
-              <hr />
+            <img src={logo} alt="Image" className="logo-in-layout"/>
             </div>
             <div className="menu">
               {SidebarMenu.map((menu) => {
