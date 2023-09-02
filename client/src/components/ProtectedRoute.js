@@ -28,7 +28,7 @@ export default function ProtectedRoute({ children }) {
         dispatch(setUser(res.data.data));
       } else {
         localStorage.clear();
-        <Navigate to="/login" />;
+          <Navigate to="/login" />;
       }
     } catch (error) {
       localStorage.clear();

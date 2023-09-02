@@ -17,7 +17,7 @@ const jobSeekerRegisterController = async (req, res) => {
       req.body.password = hashedPassword;
       const jobSeeker = new jobSeekerModel(req.body);
       await jobSeeker.save();
-      res.status(201).send({ message: "Register Sucessfully", success: true });
+      res.status(201).send({ message: "Registration Success", success: true });
     } catch (error) {
       console.log(error);
       res.status(500).send({
@@ -52,7 +52,7 @@ const jobSeekerRegisterController = async (req, res) => {
     }
   };
   
-  const authController = async (req, res) => {
+  const jbsAuthController = async (req, res) => {
     try {
       const user = await jobSeekerModel.findById({ _id: req.body.userId });
       user.password = undefined;
@@ -81,5 +81,5 @@ const jobSeekerRegisterController = async (req, res) => {
   module.exports = {
     jobSeekerRegisterController,
     jobSeekerLoginController,
-    authController
+    jbsAuthController
   }

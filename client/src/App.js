@@ -23,6 +23,7 @@ import JobSeekerInfo from "./pages/jobSeekerInfo";
 import JobSeekerRegister from "./pages/jobSeekerRegister";
 import JobSeekerDashboard from "./pages/jobSeekerDashboard";
 import ProtectedRouteJobseeker from "./components/ProtectedRouteJobseeker";
+import PublicRoute2 from "./components/publicRoute2";
 
 
 
@@ -53,17 +54,17 @@ function App() {
             <Route
               path="/consultant-info"
               element={
-                <PublicRoute>
+                // <PublicRoute>
                   <ConsultantInfo />
-                </PublicRoute>
+                // </PublicRoute>
               }
             />
             <Route
               path="/job-seeker-info"
               element={
-                <PublicRoute>
+                // <PublicRoute>
                   <JobSeekerInfo />
-                </PublicRoute>
+                // </PublicRoute>
               }
             />
             <Route
@@ -109,9 +110,9 @@ function App() {
             <Route
               path="/consultant/book-appointment/:consultantId"
               element={
-                <ProtectedRoute>
+                // <ProtectedRoute>
                   <BookingPage />
-                </ProtectedRoute>
+                // </ProtectedRoute>
               }
             />
             <Route
@@ -133,9 +134,9 @@ function App() {
             <Route
               path="/jbs-login"
               element={
-                <PublicRoute>
+                <PublicRoute2>
                   <JobSeekerLogin />
-                </PublicRoute>
+                </PublicRoute2>
               }
             />
             <Route

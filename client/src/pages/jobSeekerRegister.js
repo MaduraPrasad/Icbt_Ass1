@@ -1,70 +1,58 @@
-import React from "react";
-import "../styles/RegiserStyles.css";
-import { Form, Input, message } from "antd";
-import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { showLoading, hideLoading } from "../redux/features/alertSlice";
-import image3 from '../assets/st_login.jpg';
-import './css/register.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Navbar from "../components/navbar2";
+import './css/jobSeekerInfo.css';
+import image1 from '../assets/job2.jpg';
+import image2 from '../assets/banner3.png';
+import image3 from '../assets/consultant.jpg';
+import Footer from '../components/Footer';
+import { Button } from "antd";
 
-const JobSeekerRegister = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  //form handler
-  const onfinishHandler = async (values) => {
-    try {
-      dispatch(showLoading());
-      const res = await axios.post("/api/v1/jobseeker/jbs-register", values);
-      dispatch(hideLoading());
-      if (res.data.success) {
-        message.success("Register Successfully!");
-        navigate("/jbs-login");
-      } else {
-        message.error(res.data.message);
-      }
-    } catch (error) {
-      dispatch(hideLoading());
-      console.log(error);
-      message.error("Something Went Wrong");
+class JobSeekerInfo extends Component {
+    render() {
+        //const { user } = this.props.auth;
+        return (
+            <div>
+                <Navbar />
+                <section className="image-section">
+                    <div className="image-overlay">
+                        <p className="section-description">
+                            ARE YOU LOOKING FOR A JOB ?
+                        </p>
+                        <Link to="/jbs-dashboard">
+                        <Button className="btn-2">Get The Free Consultation</Button>
+                        </Link>
+                        
+                    </div>
+                </section>
+                {/* <div className="image-banner">
+                    <img
+                        src={image1}
+                        alt="Banner"
+                        className="banner-image"
+                    />
+                    <p className="looking-for-job">LOOKING FOR A JOB ?</p>
+                </div> */}
+
+                <section className="section">
+                    <div className="container">
+                        <div className="column" id="column-right">
+                            <p className="title">The Best Consultants</p>
+                            <p className="sub-title">"Guiding Dreams, Bridging Borders"</p>
+                            <p>
+                                At The Jobs Consultation Centre in Colombo, we are proud to house a team of dedicated and experienced job consultants who play a pivotal role in guiding and empowering job seekers on their journey towards international job opportunities. Our consultants possess specialized expertise in various countries and job sectors, ensuring that our clients receive tailored advice that aligns with their unique aspirations.
+                            </p>
+                        </div>
+                        <div className="column" id="landingPageImage">
+
+                            <img src={image3} alt="Image" className="banner" />
+                        </div>
+                    </div>
+                </section>
+
+                <Footer />
+            </div>
+        );
     }
-  };
-  return (
-      <section className="register-section">
-        <div className="register-container">
-          <div className="image-column">
-            <img src={image3} alt="Login Image" />
-          </div>
-          <div className="form-column">
-          <div className="form-container ">
-            <Form
-              layout="vertical"
-              onFinish={onfinishHandler}
-              className="register-form"
-            >
-              <h3 className="text-center">Register From</h3>
-              <Form.Item label="Name" name="name">
-                <Input type="text" required />
-              </Form.Item>
-              <Form.Item label="Email" name="email">
-                <Input type="email" required />
-              </Form.Item>
-              <Form.Item label="Password" name="password">
-                <Input type="password" required />
-              </Form.Item>
-              <Link to="/jobseeker-login" className="m-2">
-                Already I'm a user
-              </Link>
-              <button className="btn btn-primary" type="submit">
-                Register
-              </button>
-
-            </Form>
-          </div>
-          </div>
-        </div>
-      </section>
-  );
-};
-
-export default JobSeekerRegister;
+}
+export default JobSeekerInfo;
