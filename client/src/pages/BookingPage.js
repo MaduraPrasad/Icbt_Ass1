@@ -6,6 +6,7 @@ import { DatePicker, message, TimePicker } from "antd";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
+import './css/booking.css';
 
 const BookingPage = () => {
   const { user } = useSelector((state) => state.user);
@@ -99,52 +100,170 @@ const BookingPage = () => {
     //eslint-disable-next-line
   }, []);
   return (
+    // <Layout>
+    //   <h3>Shedulling</h3>
+    //   <div className="container m-2">
+    //     {consultants && (
+    //       <div>
+    //         <h4>
+    //           Mr/Mrs.{consultants.firstName} {consultants.lastName}
+    //         </h4>
+    //         <h4>Fees : {consultants.feesPerCunsaltation}</h4>
+    //         <h4>
+    //           Timings : {consultants.timings && consultants.timings[0]} -{" "}
+    //           {consultants.timings && consultants.timings[1]}{" "}
+    //         </h4>
+    //         <div className="d-flex flex-column w-50">
+    //           <DatePicker
+    //             aria-required={"true"}
+    //             className="m-2"
+    //             format="DD-MM-YYYY"
+    //             onChange={(value) => {
+    //               setDate(moment(value).format("DD-MM-YYYY"));
+    //             }}
+    //           />
+    //           <TimePicker
+    //             aria-required={"true"}
+    //             format="HH:mm"
+    //             className="mt-3"
+    //             onChange={(value) => {
+    //               setTime(moment(value).format("HH:mm"));
+    //             }}
+    //           />
+
+    //           <button
+    //             className="btn btn-primary mt-2"
+    //             onClick={handleAvailability}
+    //           >
+    //             Check Availability
+    //           </button>
+
+    //           <button className="btn btn-dark mt-2" onClick={handleBooking}>
+    //             Book Now
+    //           </button>
+    //         </div>
+    //       </div>
+    //     )}
+    //   </div>
+    // </Layout>
     <Layout>
-      <h3>Shedulling</h3>
-      <div className="container m-2">
+      <p className="titleBooking">Schedule your Time Slot </p>
+      <div className="container-booking">
         {consultants && (
-          <div>
-            <h4>
+          <div className="row">
+            <div className="col-left">
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>Name</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.firstName} {consultants.lastName}
+                </div>
+              </div>
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>Website</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.website}
+                </div>
+              </div>
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>E-mail</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.email}
+                </div>
+              </div>
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>Specialization</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.specialization}
+                </div>
+              </div>
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>Address</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.address}
+                </div>
+              </div>
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>Phone</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.phone}
+                </div>
+              </div>
+              {/* <div className="consultant-details">
+            <p className="consultant-fields">
               Mr/Mrs.{consultants.firstName} {consultants.lastName}
-            </h4>
-            <h4>Fees : {consultants.feesPerCunsaltation}</h4>
-            <h4>
-              Timings : {consultants.timings && consultants.timings[0]} -{" "}
+            </p>
+            <p className="consultant-fields">
+              website:{consultants.website}
+            </p>
+            <p className="consultant-fields">
+              Email:{consultants.email}
+            </p>
+            <p className="consultant-fields">
+              specialization:{consultants.specialization}
+            </p>
+            <p className="consultant-fields">
+              Timings: {consultants.timings && consultants.timings[0]} -{" "}
               {consultants.timings && consultants.timings[1]}{" "}
-            </h4>
-            <div className="d-flex flex-column w-50">
-              <DatePicker
-                aria-required={"true"}
-                className="m-2"
-                format="DD-MM-YYYY"
-                onChange={(value) => {
-                  setDate(moment(value).format("DD-MM-YYYY"));
-                }}
-              />
-              <TimePicker
-                aria-required={"true"}
-                format="HH:mm"
-                className="mt-3"
-                onChange={(value) => {
-                  setTime(moment(value).format("HH:mm"));
-                }}
-              />
-
-              <button
-                className="btn btn-primary mt-2"
-                onClick={handleAvailability}
-              >
-                Check Availability
-              </button>
-
-              <button className="btn btn-dark mt-2" onClick={handleBooking}>
-                Book Now
-              </button>
+            </p>
+          </div> */}
+            </div>
+            <div className="col-right">
+              <div className="d-flex flex-column availability-form">
+                <div className="row">
+                  <div className="col-md-12">
+                    <DatePicker
+                      aria-required="true"
+                      className="datepicker"
+                      format="DD-MM-YYYY"
+                      onChange={(value) => {
+                        setDate(moment(value).format("DD-MM-YYYY"));
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="row" id="timepicker-bottom">
+                  <div className="col-md-12">
+                    <TimePicker
+                      aria-required="true"
+                      format="HH:mm"
+                      className="timepicker"
+                      onChange={(value) => {
+                        setTime(moment(value).format("HH:mm"));
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-btn-left">
+                    <button className="btn-available" onClick={handleAvailability}>
+                      Check Availability
+                    </button>
+                  </div>
+                  <div className="col-btn-right">
+                    <button className="btn-book" onClick={handleBooking}>
+                      Book Now
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         )}
       </div>
     </Layout>
+
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar";
+import Navbar from "../components/navbar2";
 import './css/jobSeekerInfo.css';
 import image1 from '../assets/job2.jpg';
 import image2 from '../assets/banner3.png';
@@ -19,7 +19,7 @@ class JobSeekerInfo extends Component {
                         <p className="section-description">
                             ARE YOU LOOKING FOR A JOB ?
                         </p>
-                        <Link to="/jbs-login">
+                        <Link to="/jbs-dashboard">
                         <Button className="btn-2">Get The Free Consultation</Button>
                         </Link>
                         
