@@ -1,0 +1,23 @@
+
+    .container{
+        width: 100%;
+        height: 50%;
+    }
+
+    .scheduling-container {
+      padding: 20px;
+    }
+  
+    .consultant-details {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+  
+    .availability-form {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      height: 100%;
+    }
