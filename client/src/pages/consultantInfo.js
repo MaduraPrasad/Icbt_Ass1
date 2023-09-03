@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar2";
 import './css/consultantInfo.css';
-import image1 from '../assets/IIT.jpg';
+import image1 from '../assets/staff.png';
 import image2 from '../assets/banner3.png';
-import image3 from '../assets/consultant.jpg';
+import image3 from '../assets/staff.jpg';
 import Footer from '../components/Footer';
 
 class ConsultantInfo extends Component {
@@ -13,15 +13,18 @@ class ConsultantInfo extends Component {
         return (
             <div>
                 <Navbar />
+                <div className="banner-first">
                 <div className="image-banner">
                     <img
-                        src={image1}
+                        src={image3}
                         alt="Banner"
                         className="banner-image"
                     />
                 </div>
+                </div>
 
-                <section className="section">
+
+                <section className="section-info">
                     <div className="container">
                         <div className="column" id="column-right">
                             <p className="title">The Best Consultants</p>
@@ -40,11 +43,11 @@ class ConsultantInfo extends Component {
                         </div>
                     </div>
                 </section>
-                <section className="section">
+                <section className="section-info2">
                     <div className="container">
                         <div className="column" id="landingPageImage">
 
-                            <img src={image3} alt="Image" className="banner" />
+                            <img src={image1} alt="Image" className="banner" />
                         </div>
 
                         <div className="column" id="column-right">

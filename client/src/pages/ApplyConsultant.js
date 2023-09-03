@@ -83,7 +83,7 @@ const ApplyConsultant = () => {
               required
               rules={[{ required: true }]}
             >
-              <Input type="text" placeholder="your contact no" />
+              <Input type="text" placeholder="your contact no" className="input-consultantApply"/>
             </Form.Item>
           </Col>
           <Col xs={24} md={24} lg={8}>
@@ -161,7 +161,7 @@ const ApplyConsultant = () => {
           </Col>
           <Col xs={24} md={24} lg={8}></Col>
           <Col xs={24} md={24} lg={8}>
-            <button className="btn btn-primary form-btn" type="submit">
+            <button className="btn-apply btn-primary form-btn" type="submit">
               Submit
             </button>
           </Col>

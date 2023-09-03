@@ -39,7 +39,7 @@ const JobSeekerDashboard = () => {
       <div>
         <Navbar />
         <div className="container">
-        <h1 className="text-center">Currently Avilable Counsultants.</h1>
+        <h1 className="text-center">CURRENTLY AVAILABLE COUNSLTANTS</h1>
         <Row>
           {consultants && consultants.map((consultant) => <ConsultantList consultant={consultant} />)}
         </Row>

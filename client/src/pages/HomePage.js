@@ -30,7 +30,7 @@ const HomePage = () => {
   }, []);
   return (
     <Layout>
-      <h1 className="text-center">Currently Registered Counsultants.</h1>
+      <h1 className="text-center">CURRENTLY REGISTERED CONSULTANTS</h1>
       <Row>
         {consultants && consultants.map((consultant) => <ConsultantList consultant={consultant} />)}
       </Row>
