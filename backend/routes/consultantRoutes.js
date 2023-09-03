@@ -10,13 +10,13 @@ const {
 const authMiddleware = require("../middlewares/authMiddleware");
 const router = express.Router();
 
-//POST SINGLE DOC INFO
+//POST SINGLE consultant INFO
 router.post("/getConsultantInfo", authMiddleware, getConsultantInfoController);
 
 //POST UPDATE PROFILE
 router.post("/updateProfile", authMiddleware, updateProfileController);
 
-//POST  GET SINGLE DOC INFO
+//POST  GET consultant DOC INFO
 router.post("/getConsultantById", authMiddleware, getConsultantsByIdController);
 
 //GET Appointments

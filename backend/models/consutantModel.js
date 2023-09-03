@@ -36,10 +36,10 @@ const consultantSchema = new mongoose.Schema(
       type: String,
       required: [true, "experience is required"],
     },
-    feesPerCunsaltation: {
-      type: Number,
-      required: [true, "fee is required"],
-    },
+    // feesPerCunsaltation: {
+    //   type: Number,
+    //   required: [true, "fee is required"],
+    // },
     status: {
       type: String,
       default: "pending",

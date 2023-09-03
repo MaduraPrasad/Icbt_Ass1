@@ -248,7 +248,7 @@ const userAppointmentsController = async (req, res) => {
   try {
     const appointments = await shedullingModel.find({
       userId: req.body.userId,
-    });
+    }).populate('consultantInfo', 'firstName lastName specialization');
     res.status(200).send({
       success: true,
       message: "Users Appointments Fetch SUccessfully",

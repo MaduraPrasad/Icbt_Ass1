@@ -13,6 +13,7 @@ const ShedullingSchema = new mongoose.Schema(
     consultantInfo: {
       type: String,
       required: true,
+      ref:'consultants'
     },
     userInfo: {
       type: String,
