@@ -21,6 +21,12 @@ const router = express.Router();
 //LOGIN || POST
 router.post("/login", loginController);
 
+
+// ------------------------------------------
+//LOGIN || POST 
+// router.post("/jbs-login", loginController);
+//-------------------------------------------
+
 //REGISTER || POST
 router.post("/register", registerController);
 
@@ -45,6 +51,9 @@ router.post(
 
 //GET ALL DOC
 router.get("/getAllconsultants", authMiddleware, getAllConsultantController);
+
+//GET ALL consultant without authorization
+router.get("/getAllconsultantsForUsers", getAllConsultantController);
 
 //BOOK APPOINTMENT
 router.post("/book-appointment", authMiddleware, bookeAppointmnetController);

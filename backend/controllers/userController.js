@@ -42,7 +42,7 @@ const loginController = async (req, res) => {
     if (!isMatch) {
       return res
         .status(200)
-        .send({ message: "Invlid EMail or Password", success: false });
+        .send({ message: "Invalid EMail or Password", success: false });
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
@@ -158,7 +158,7 @@ const deleteAllNotificationController = async (req, res) => {
   }
 };
 
-//GET ALL DOC
+//GET ALL Consultant
 const getAllConsultantController = async (req, res) => {
   try {
     const consultant = await consultantModel.find({ status: "approved" });
