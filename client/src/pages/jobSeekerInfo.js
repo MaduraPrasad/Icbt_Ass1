@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Navbar from "../components/navbar";
+import Navbar from "../components/navbar2";
 import './css/jobSeekerInfo.css';
 import image1 from '../assets/job2.jpg';
 import image2 from '../assets/banner3.png';

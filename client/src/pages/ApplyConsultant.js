@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import axios from "axios";
 import moment from "moment";
-import consultantImage from "../assets/test.jpg";
 import './css/ApplyConsultant2.css';
 
 const ApplyConsultant = () => {
@@ -137,6 +136,16 @@ const ApplyConsultant = () => {
           </Col>
           <Col xs={24} md={24} lg={8}>
             <Form.Item
+              label="Image"
+              name="image"
+              required
+              rules={[{ required: true }]}
+            >
+              <Input type="file" />
+            </Form.Item>
+          </Col>
+          {/* <Col xs={24} md={24} lg={8}>
+            <Form.Item
               label="Fees Per Cunsaltation"
               name="feesPerCunsaltation"
               required
@@ -144,7 +153,7 @@ const ApplyConsultant = () => {
             >
               <Input type="text" placeholder="your contact no" />
             </Form.Item>
-          </Col>
+          </Col> */}
           <Col xs={24} md={24} lg={8}>
             <Form.Item label="Available Time Slots" name="timings" required>
               <TimePicker.RangePicker format="HH:mm" />

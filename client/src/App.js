@@ -25,6 +25,9 @@ import JobSeekerDashboard from "./pages/jobSeekerDashboard";
 import ProtectedRouteJobseeker from "./components/ProtectedRouteJobseeker";
 import PublicRoute2 from "./components/publicRoute2";
 import Services from "./pages/service";
+import Contact from "./pages/contact";
+import About from "./pages/about";
+import ConsultantAppointmentsJBS from "./pages/consultant/ConsultantAppointmentJBS";
 
 
 
@@ -36,18 +39,30 @@ function App() {
         {loading ? (
           <Spinner />
         ) : (
-          
+
           <Routes>
             <Route
               path="/"
               element={
-                  <Landing />
+                <Landing />
               }
             />
             <Route
               path="/services"
               element={
-                  <Services />
+                <Services />
+              }
+            />
+            <Route
+              path="/contact"
+              element={
+                <Contact />
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <About />
               }
             />
             <Route
@@ -62,7 +77,7 @@ function App() {
               path="/consultant-info"
               element={
                 // <PublicRoute>
-                  <ConsultantInfo />
+                <ConsultantInfo />
                 // </PublicRoute>
               }
             />
@@ -70,16 +85,16 @@ function App() {
               path="/job-seeker-info"
               element={
                 // <PublicRoute>
-                  <JobSeekerInfo />
+                <JobSeekerInfo />
                 // </PublicRoute>
               }
             />
             <Route
               path="/user-consultant-list"
               element={
-                
-                  <UserConsultantList />
-                
+
+                <UserConsultantList />
+
               }
             />
             <Route
@@ -117,9 +132,9 @@ function App() {
             <Route
               path="/consultant/book-appointment/:consultantId"
               element={
-                 <ProtectedRoute>
+                <ProtectedRoute>
                   <BookingPage />
-                 </ProtectedRoute>
+                </ProtectedRoute>
               }
             />
             <Route
@@ -186,7 +201,16 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            
+
+            {/* <Route
+              path="/consultant-appointments-jbs"
+              element={
+                <ProtectedRouteJobseeker>
+                  <ConsultantAppointmentsJBS />
+                </ProtectedRouteJobseeker>
+              }
+            /> */}
+
           </Routes>
         )}
       </BrowserRouter>

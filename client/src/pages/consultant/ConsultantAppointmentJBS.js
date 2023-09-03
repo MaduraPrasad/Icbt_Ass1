@@ -6,7 +6,7 @@ import axios from "axios";
 import moment from "moment";
 import { message, Table } from "antd";
 
-const ConsultantAppointments = () => {
+const ConsultantAppointmentsJBS = () => {
   const [appointments, setAppointments] = useState([]);
 
   const getAppointments = async () => {
@@ -45,7 +45,7 @@ const ConsultantAppointments = () => {
       }
     } catch (error) {
       console.log(error);
-      // message.error("Something Went Wrong");
+      message.error("Something Went Wrong");
     }
   };
 
@@ -101,4 +101,4 @@ const ConsultantAppointments = () => {
   );
 };
 
-export default ConsultantAppointments;
+export default ConsultantAppointmentsJBS;

@@ -1,0 +1,151 @@
+
+.section {
+    height: 100vh;
+    padding: 40px 0;
+    background-color: #ffffff;
+  }
+  
+  .container {
+    padding-top: 5%;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .column .title {
+    font-size: 45px;
+    font-weight: bold;
+    color: #303131;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .column .sub-title {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #00587c; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* .column {
+    align-items: center;
+    flex: 1;
+    padding: 5px;
+    height: 100%;
+  } */
+
+  #column-contact-left{
+    width: 50%;
+  }
+  
+#column-right{
+    padding-left: 80px;
+}
+
+  .column img {
+    padding-right: 50px;
+    width: 100%;
+    height: 300px;
+    box-shadow: none;
+  }
+  
+  .column p {
+    padding-top: 1%;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:500;
+    padding-bottom: 30px;
+  }
+  
+  .btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #00587c;
+    color: white;
+    font-size: 16px;
+  }
+
+  .landingPageImage{
+    height: 100%;
+  }
+  
+  .banner{
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .banner:hover{
+    transition: transform 0.3s ease;
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .column-contact-text{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding: 10px 0;
+    width: 70%;
+  }
+
+  .column-contact-icon{
+    color: #00587c;
+    font-weight: 500;
+    font-size: 15px;
+    width: 30%;
+    text-align: right;
+    padding: 10px 40px;
+  }
+
+  .column-contact-text:hover{
+    color: #303131;
+    cursor: pointer;
+  }
+
+  .row-contact{
+    display: flex;
+    box-shadow: 0px 2px 5px #d5d6d6;
+    margin: 20px 10px;
+    padding: 5px;
+  }
+
+
+  .column-contact {
+    flex: 1; /* Each column occupies 50% of the row width */
+    padding: 10px; /* Optional: Add padding to columns for spacing */
+    border: 1px solid #ccc; /* Optional: Add borders to columns for separation */
+  }
+  .column.left {
+    flex: 30%; /* Adjust the width of the left column */
+  }
+  
+  .column.right {
+    flex: 70%; /* Adjust the width of the right column */
+  }
+
+  i.fa-globe, i.fa-solid {
+    margin-right: 30px;
+    padding-left: 35px;
+  }
+  .second-line{
+    margin-left: 56px;
+  }
+
+  i.fa-solid:hover{
+    color: #00587c;
+  }

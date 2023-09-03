@@ -31,15 +31,24 @@ const Appointments = () => {
       title: "ID",
       dataIndex: "_id",
     },
-    // {
-    //   title: "Name",
-    //   dataIndex: "name",
-    //   render: (text, record) => (
-    //     <span>
-    //       {record.doctorInfo.firstName} {record.doctorInfo.lastName}
-    //     </span>
-    //   ),
-    // },
+    {
+      title: "Consultant Name",
+      dataIndex: "consultantInfo",
+      render: (consultantInfo) => (
+        <span>
+          {consultantInfo.firstName} {consultantInfo.lastName}
+        </span>
+      ),
+    },
+    {
+      title: "Specialization",
+      dataIndex: "consultantInfo",
+      render: (consultantInfo) => (
+        <span>
+          {consultantInfo.specialization} 
+        </span>
+      ),
+    },
     // {
     //   title: "Phone",
     //   dataIndex: "phone",

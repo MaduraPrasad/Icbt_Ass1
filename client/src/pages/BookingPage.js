@@ -200,6 +200,14 @@ const BookingPage = () => {
                   {consultants.phone}
                 </div>
               </div>
+              <div className="row-consultant-fields">
+                <div className="col-consultant-fields-left">
+                  <label>Available Time</label>
+                </div>
+                <div className="col-consultant-fields-right">
+                  {consultants.timings}
+                </div>
+              </div>
               {/* <div className="consultant-details">
             <p className="consultant-fields">
               Mr/Mrs.{consultants.firstName} {consultants.lastName}

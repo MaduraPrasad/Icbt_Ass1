@@ -10,7 +10,7 @@
 }
 
 .text-center{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: black;
   text-align: left;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -41,6 +41,7 @@
   background-color: #00587c;
 }
 .body {
+  overflow: auto;
   height: 85vh;
   margin-bottom: 20px;
   border: none;
@@ -66,7 +67,7 @@
   font-size: 0.8rem;
 }
 .menu-item i {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0 15px;
 }
 .active {
@@ -107,7 +108,7 @@
 
 .header-content a {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(255, 255, 255);
   margin: 0 10px;
   margin-top: 20px;
@@ -116,7 +117,7 @@
 
 
 .header-content a:hover {
-  font-size: 1.3rem;
+  color: rgb(207, 208, 209);
 }
 
 .text-light{

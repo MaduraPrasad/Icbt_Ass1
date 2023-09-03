@@ -20,15 +20,15 @@
 
 .title-services {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 500;
     padding-left: 8%;
-    padding-top: 70px;
+    padding-top: 50px;
     color: #00587c;
 }
 
 .details{
-    padding: 30px 8%;
+    padding: 20px 8%;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #575959;
@@ -52,4 +52,18 @@
     font-size: 20px;
     padding-left: 15%;
     padding-top: 5%;
+}
+
+.sub-title-services{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 8%;
+    padding-top: 15px;
+    color: #00587c;
+}
+
+.section{
+    padding: 0 80px;
+    padding-bottom: 10%;
 }

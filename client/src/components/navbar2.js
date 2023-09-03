@@ -31,11 +31,11 @@ const Navbar2 = () => {
                         </div>
                         <ul class="nav-list">
                             <li><a href="/">Home</a></li>
-                            <li><a href="/">About</a></li>
+                            <li><a href="/about">About</a></li>
                             <li><a href="/services">Services</a></li>
                             <li><a href="/job-seeker-info">Job Seeker</a></li>
                             <li><a href="/consultant-info">Consultant</a></li>
-                            <li><a href="/">Contact</a></li>
+                            <li><a href="/contact">Contact</a></li>
                             <li><a href="/" onClick={handleLogout}>Sign out</a></li>
                             <li className="user"><a href="#">{user?.name}</a></li>
                         </ul>
@@ -47,11 +47,11 @@ const Navbar2 = () => {
                         </div>
                         <ul class="nav-list">
                             <li><a href="/">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="/about">About</a></li>
                             <li><a href="/services">Services</a></li>
                             <li><a href="/job-seeker-info">Job Seeker</a></li>
                             <li><a href="/consultant-info">Consultant</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="/contact">Contact</a></li>
 
                         </ul>
                     </nav>

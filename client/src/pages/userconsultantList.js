@@ -33,14 +33,14 @@ const UserConsultantList = () => {
   }, []);
   return (
     <div>
-                <Navbar />
-                <section className="section">
-                    <div className="container">
-                    {consultants && consultants.map((consultant) => <ConsultantList consultant={consultant} />)}
-                    </div>
-                </section>
-                <Footer />
-            </div>     
+      <Navbar />
+      <section className="section">
+        <div className="container">
+          {consultants && consultants.map((consultant) => <ConsultantList consultant={consultant} />)}
+        </div>
+      </section>
+      <Footer />
+    </div>
 
   );
 };
