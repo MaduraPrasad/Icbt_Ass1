@@ -24,6 +24,7 @@ import JobSeekerRegister from "./pages/jobSeekerRegister";
 import JobSeekerDashboard from "./pages/jobSeekerDashboard";
 import ProtectedRouteJobseeker from "./components/ProtectedRouteJobseeker";
 import PublicRoute2 from "./components/publicRoute2";
+import Services from "./pages/service";
 
 
 
@@ -41,6 +42,12 @@ function App() {
               path="/"
               element={
                   <Landing />
+              }
+            />
+            <Route
+              path="/services"
+              element={
+                  <Services />
               }
             />
             <Route
@@ -110,9 +117,9 @@ function App() {
             <Route
               path="/consultant/book-appointment/:consultantId"
               element={
-                // <ProtectedRoute>
+                 <ProtectedRoute>
                   <BookingPage />
-                // </ProtectedRoute>
+                 </ProtectedRoute>
               }
             />
             <Route
